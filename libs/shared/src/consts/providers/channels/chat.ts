@@ -1,5 +1,5 @@
 import { IConfigCredentials, IProviderConfig } from '../provider.interface';
-import { slackConfig } from '../credentials';
+import { slackConfig, viberChatConfig } from '../credentials';
 import { ChatProviderIdEnum } from '../provider.enum';
 
 import { ChannelTypeEnum } from '../../../types';
@@ -36,5 +36,13 @@ export const chatProviders: IProviderConfig[] = [
     credentials: [] as IConfigCredentials[],
     docReference: 'https://developers.mattermost.com/integrate/webhooks/incoming/',
     logoFileName: { light: 'mattermost.svg', dark: 'mattermost.svg' },
+  },
+  {
+    id: ChatProviderIdEnum.ViberChat,
+    displayName: 'Viber Chat',
+    channel: ChannelTypeEnum.CHAT,
+    credentials: viberChatConfig,
+    docReference: 'https://docs.novu.co/channels-and-providers/chat/viber-chat/',
+    logoFileName: { light: 'viber-chat.svg', dark: 'viber-chat.svg' },
   },
 ];

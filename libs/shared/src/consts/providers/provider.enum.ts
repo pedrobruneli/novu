@@ -78,6 +78,7 @@ export enum ChatProviderIdEnum {
   Discord = 'discord',
   MsTeams = 'msteams',
   Mattermost = 'mattermost',
+  ViberChat = 'viber-chat',
 }
 
 export enum PushProviderIdEnum {
